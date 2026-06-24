@@ -1,0 +1,17 @@
+LOCAL / OFFLINE ARCHITECTURE
+- Front end: Static HTML, CSS, vanilla JavaScript.
+- Storage: Browser localStorage key quick_refuel_b2b_distribution_v1.
+- Existing v1 data is normalized and preserved where possible.
+- Legacy Owner/Admin becomes Owner; legacy Accountant becomes Manager.
+
+ROLE MODEL
+- Owner and Admin: full interface access.
+- Manager: menu visibility is driven by saved permission codes.
+- Salesman: branch workspace only; assigned sub-branch required.
+- Password authentication and server-side authorization are intentionally not implemented in this local/offline build.
+
+NEXT ONLINE PHASE
+- Replace localStorage with central PostgreSQL/Supabase database.
+- Add password login/authentication.
+- Enforce roles and branch data with server-side Row Level Security.
+- Deploy to a private domain for Head Office and Branch use.

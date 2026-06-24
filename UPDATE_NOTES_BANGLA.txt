@@ -1,0 +1,74 @@
+B2B WHOLESALE APP — PREMIUM UI & ROLE UPDATE (v4)
+
+এই ZIP-এ যা পরিবর্তন করা হয়েছে
+
+1. Premium Design
+- পুরো app-এর sidebar, top bar, cards, forms, tables, report pages ও dashboard নতুন premium SaaS style-এ সাজানো হয়েছে।
+- Dashboard-এ এখন Total Sales, Total Purchase, Gross Profit, Customer Due, Stock Value সহ বড় KPI cards আছে।
+- নিচে Vendor Due, Expenses, Cash in Hand, Bank Balance, Low Stock এবং Pending Approval cards আছে।
+- Sales Overview, Top Selling Products, Recent Transactions, Branch-wise Business, Settlement/Approval status এবং Backup status যুক্ত করা হয়েছে।
+
+2. নতুন Sidebar Menu Order
+Dashboard
+
+OPERATIONS
+- Purchase
+- Sales
+- Stock & Inventory
+- Payments
+- Expenses
+- Transfers
+- Returns & Damage
+
+MANAGEMENT & REPORT
+- Settlement Report
+- Approve
+- Products
+- Customers
+- Vendors
+
+CONTROL
+- Branches
+- Users & Roles
+- Activity
+- Administration
+
+3. User Roles
+Owner
+- Main protected account.
+
+Admin
+- Owner account-এর সব menu, report, approval, branch, user role ও administration option ব্যবহার করতে পারবে।
+
+Manager
+- User তৈরি/এডিট করার সময় checkbox দিয়ে আলাদা permission দিতে হবে।
+- Available permissions: Purchase, Warehouse Sales, Branch Sales, Stock, Stock Transfer, Customer Collection, Expenses, Return/Damage Request, Return/Damage Approval, Settlement Report View, Customer, Product এবং Vendor.
+- যে permission দেওয়া হবে শুধু সেই menu / page দেখবে।
+
+Salesman
+- Salesman তৈরি করার সময় অবশ্যই একটি Sub Branch assign করতে হবে।
+- Salesman login করলে তার branch dashboard automatic খুলবে।
+- Salesman sidebar: Dashboard, Sales, Stock, Customer, Return & Damage, এবং নিচে Log out.
+- অন্য branch-এর dashboard/menu দেখবে না।
+- Branch dashboard-এ Today Sales, Customer Collection, Customer Due, Stock Value, Today Expenses, Low Stock এবং Latest Locked Settlement দেখা যাবে।
+
+4. Branch Assignment
+- Branch edit করার সময় Salesman এবং Manager assign করার option আছে।
+- Salesman-এর branch পরিবর্তন করলে আগের branch assignment remove হয়ে নতুন branch-এ assign হবে।
+
+5. Settlement
+- আগের Settlement report, Draft Preview, Confirm & Lock, Reopen এবং Salesman view-only settlement functionality রাখা হয়েছে।
+
+IMPORTANT — PASSWORD / REAL SECURITY
+এই version এখনও local/offline app। Login screen-এ user select করে temporary login করা হয়; password system এখনও যোগ করা হয়নি, আপনার আগের নির্দেশ অনুযায়ী।
+
+Manager permission ও Salesman menu restriction এই local version-এ interface level access control। Main Branch + Sub Branch online central database এবং real password security দেওয়ার জন্য পরের ধাপে Supabase/PostgreSQL + Authentication লাগবে।
+
+আগের data-এর জন্য
+এই update পুরোনো local data রাখতে একই browser storage key ব্যবহার করছে। পুরোনো Owner/Admin account Owner হিসেবে দেখাবে। পুরোনো Accountant user থাকলে Manager role-এ convert হবে এবং default operational permission পাবে।
+
+চালানোর নিয়ম
+1. ZIP extract করুন।
+2. b2b_wholesale_app folder-এর index.html Chrome/Edge দিয়ে open করুন।
+3. পুরোনো data থাকলে প্রথমে Administration থেকে Backup JSON download করে রাখুন।
+4. Users & Roles থেকে Admin, Manager, Salesman তৈরি করে test করুন।

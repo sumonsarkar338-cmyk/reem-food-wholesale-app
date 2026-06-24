@@ -1,0 +1,21 @@
+FUNCTIONAL CHECK REPORT — v6 repair
+
+Fixed critical runtime issue:
+- Missing helper functions caused Purchase, Sales, Transfer, Customer Payment, Expense and other operations to fail with "settlementForDate is not defined".
+- Added settlementForDate(), addDays(), previousDate(), and purchaseBranchId() helpers.
+
+Automated regression checks passed:
+- Product, vendor and customer creation
+- Purchase and warehouse stock increase
+- Warehouse-to-branch transfer and branch stock increase
+- Due sale and stock deduction
+- Customer collection and due reduction
+- Expense entry
+- Sales return request and approval
+- Purchase return request and approval
+- Stock return and damage return approval
+- Vendor payment
+- Settlement draft, lock, and reopen
+- Settlement lock blocking a backdated sale
+
+Data remains browser-local in this version.
